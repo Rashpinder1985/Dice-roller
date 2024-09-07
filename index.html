@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dice Roller</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Dice Roller</h1>
+    <div class="dice-controls">
+      <label for="dice-count">Select the number of dice to roll:</label>
+      <select id="dice-count">
+        <option value="1">1 Dice</option>
+        <option value="2">2 Dice</option>
+        <option value="3">3 Dice</option>
+        <option value="4">4 Dice</option>
+      </select>
+      <button id="roll-button">Roll Dice</button>
+    </div>
+
+    <div class="roll-times">
+      <label for="roll-times-input">Enter the number of times to roll the dice (up to 10M):</label>
+      <input type="number" id="roll-times-input" min="1" max="10000000" placeholder="Enter N (Max 10M)">
+      <button id="multi-roll-button">Roll N Times</button>
+    </div>
+
+    <div class="chart-section">
+      <button id="show-chart">Show Dice Distribution Chart</button>
+      <canvas id="dice-chart"></canvas>
+    </div>
+
+    <div class="output">
+      <h2>Roll Results:</h2>
+      <p id="result"></p>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
