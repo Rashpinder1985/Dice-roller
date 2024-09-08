@@ -8,6 +8,11 @@
 </head>
 <body>
   <div class="container">
+    <div class="dice-container" id="dice-container">
+      <div id="dice-faces">
+        <!-- Dice faces will be dynamically generated here -->
+      </div>
+    </div>
     <h1>Dice Roller</h1>
     <div class="dice-controls">
       <label for="dice-count">Select the number of dice to roll:</label>
@@ -27,15 +32,21 @@
     </div>
 
     <div class="chart-section">
-      <button id="show-chart">Show Dice Distribution Chart</button>
-      <canvas id="dice-chart"></canvas>
-    </div>
+  <canvas id="dice-chart"></canvas>
+  <button id="show-chart">Show Dice Distribution Chart</button>
+</div>
+
 
     <div class="output">
       <h2>Roll Results:</h2>
       <p id="result"></p>
     </div>
+    
+    <!-- Add "Get Sum" Button -->
+    <button id="get-sum-button">Get Sum of All Rolls</button>
+    <p id="total-sum"></p>
   </div>
+
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
